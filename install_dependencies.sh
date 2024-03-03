@@ -11,7 +11,7 @@ pip3 install transforms3d
 
 echo "source /usr/share/gazebo/setup.sh" >> ~/.bashrc
 
-sudo apt install -y ros-galactic-joint-state-publisher-gui ros-galactic-effort-controllers ros-galactic-controller-manager ros-galactic-gazebo-ros2-control ros2-galactic-ros2-control ros-galactic-joint-state-broadcaster ros-galactic-joint-trajectory-controller ros-galactic-position-controllers ros-galactic-diff-drive-controller ros-galactic-velocity-controllers
+sudo apt install -y ros-galactic-joint-state-publisher-gui ros-galactic-effort-controllers ros-galactic-controller-manager ros-galactic-gazebo-ros2-control ros-galactic-ros2-control ros-galactic-joint-state-broadcaster ros-galactic-joint-trajectory-controller ros-galactic-position-controllers ros-galactic-diff-drive-controller ros-galactic-velocity-controllers
 
 source /opt/ros/galactic/setup.bash
 cd ~/ros2_ws && colcon build --symlink-install
