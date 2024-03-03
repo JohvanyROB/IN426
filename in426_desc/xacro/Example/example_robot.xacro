@@ -1,0 +1,48 @@
+<?xml version='1.0'?>
+<robot name="example_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:include filename="$(find in426_desc)/xacro/material.xacro"/>
+  <!--Add the xacro:property tags here-->
+
+  <!-- ***************************************** -->
+  <link name="world"/>
+  <joint name="world_to_base" type="fixed">
+    <parent link="world"/>
+    <child link="base_link"/>
+  </joint>
+
+  <link name="base_link">
+    <!-- TODO -->
+  </link>
+
+  <!-- ***************************************** -->
+  <!-- <link name="link1">
+
+  </link>
+  <joint name="base_link_to_1" type="revolute">
+    
+  </joint> -->
+
+  <!-- ***************************************** -->
+  <!-- <link name="link2_left">
+    
+  </link>
+  <joint name="1_to_left" type="revolute">
+    
+  </joint> -->
+
+  <!-- ***************************************** -->
+  <!-- <link name="link2_right">
+    
+  </link>
+  <joint name="1_to_right" type="revolute">
+    
+  </joint> -->
+
+  <!-- ***************************************** -->
+  <!-- <link name="head">
+    
+  </link>
+  <joint name="1_to_head" type="revolute">
+     
+  </joint> -->
+</robot>
