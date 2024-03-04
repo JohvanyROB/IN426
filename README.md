@@ -2,7 +2,7 @@
 
 ## Clone this repository in your workspace
 ```bash
-cd ~/ros2_ws/src && git clone https://github.com/JohvanyROB/IN426
+mkdir -p ~/ros2_ws/src && cd ~/ros2_ws/src && git clone https://github.com/JohvanyROB/IN426
 ```
 
 ## Install ROS2 galactic if not done yet
