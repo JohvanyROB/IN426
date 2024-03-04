@@ -4,11 +4,12 @@
     <static>true</static>
     <link name="box">
       <visual name="visual_box">
-        <pose>0 0 0 0 0 0</pose>
+        <pose>0 0 0 0 1.57 0</pose>
         <geometry>
-          <box>
-            <size>0.01 0.1 0.1</size>
-          </box>
+          <mesh>
+            <uri>model://green_tag/mesh/Cylinder_hole.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
         </geometry>
 
         <material>
