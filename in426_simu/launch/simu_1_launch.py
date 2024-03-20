@@ -4,7 +4,8 @@ from ament_index_python.packages import get_package_share_directory
 
 from launch import LaunchDescription
 from launch.launch_description_sources import PythonLaunchDescriptionSource
-from launch.actions import IncludeLaunchDescription
+from launch.actions import IncludeLaunchDescription, RegisterEventHandler, ExecuteProcess
+from launch.event_handlers import OnProcessExit
 from launch_ros.actions import Node
 
 
@@ -26,8 +27,22 @@ def generate_launch_description():
         )
     )
 
+    stop_previous_gazebo = ExecuteProcess(cmd=[
+        "killall",
+        "gzserver",
+        "gzclient"
+    ], output='screen')
+
+
     return LaunchDescription([
-        gazebo_launch,
+        stop_previous_gazebo,
+
+        RegisterEventHandler(
+            event_handler = OnProcessExit(
+              target_action = stop_previous_gazebo,
+              on_exit = [gazebo_launch]  #start this node when previous gazebo processes have been stopped
+            )
+        ),
 
         spawn_robot_launch,
 
